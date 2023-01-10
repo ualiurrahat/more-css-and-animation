@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Animation with CSS</title>
+    <style>
+        .field {
+            border: 1px solid black;
+        }
+        /*bat will move when hover in the field class */
+        .field:hover .bat {
+            transform: rotate(-60deg);
+            transform-origin: top rigth;
+        }
+        .bat{
+            transition: transform 0.2s ease-in;
+        }
+        .ball{
+            width: 50px;
+            background-color: red;
+            height: 50px;
+            border-radius: 25px;
+            position: relative;
+            left:267px;
+        }
+        /* ball will move when hover in the field class  */
+        .field:hover .ball{
+            transform: translate(700px, -200px);
+        }
+        .ball{
+            transition: transform 1s ease-out 0.2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="field">
+        <img class="bat" src="images/bat.png" alt="">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>

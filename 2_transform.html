@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform Properties</title>
+    <style>
+        .container,
+        .inner {
+            width: 150px;
+            height: 150px;
+            border: 1px solid khaki;
+        }
+
+        .container {
+            background-color: lightblue;
+        }
+
+        .inner {
+            background-color: indianred;
+            /* transform: scale(0.75) rotate(60deg) translate(50px, 70px); */
+            /* scale(0.5, 0.2) -> x=0.5, y = 0.2 */
+            transform: translate(50px, 100px) rotate(30deg) scale(0.7, 0.5);
+            /* translate: moves the <div> element 50 pixels to the right, and 100 pixels down from its current position */
+            /* The rotate() method rotates an element clockwise or counter-clockwise according to a given degree.
+                Using negative values will rotate the element counter-clockwise. */
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner">box-1</div>
+    </div>
+    <div class="container">
+        <div class="inner">box-2</div>
+    </div>
+    <div class="container">
+        <div class="inner">box-3</div>
+    </div>
+</body>
+
+</html>

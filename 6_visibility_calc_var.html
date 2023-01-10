@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility, Calc and Custom Variable in CSS</title>
+    <style>
+        /* custom variable  */
+        :root {
+            --primary-color: brown;
+            /* suppose we have used brown color in hundreds of places. so instead of using brown each time respectively,
+            we can set it as primary color using custom variable property of CSS  */
+        }
+
+        .box {
+            color: var(--primary-color);
+        }
+
+        #box2 {
+            border: 2px solid var(--primary-color);
+            background-color: green;
+            /* calc function
+            width: 100% - 500px  */
+            width: calc(100% - 500px);
+        }
+
+        p {
+            color: var(--primary-color);
+        }
+
+        .bag {
+            width: 150px;
+            height: 150px;
+            border: 2px solid var(--primary-color);
+        }
+
+        #bag-2 {
+            /* visibility: hidden; */
+            /* it acquires the element's space but does not show element */
+            display: none;
+            /* it's like the element does not exist */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="bag" id="bag-1"></div>
+        <div class="bag" id="bag-2"></div>
+        <div class="bag" id="bag-3"></div>
+        <div class="bag" id="bag-4"></div>
+    </div>
+    <div class="box">
+        <div id="box1">
+            <h2>this is header 1</h2>
+        </div>
+        <div id="box2">
+            <h2>this is header 2</h2>
+        </div>
+        <div id="box3">
+            <h2>this is header 3</h2>
+        </div>
+        <div id="box4">
+            <h2>this is header 4</h2>
+        </div>
+        <p>this is a paragraph</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS specificity, priority, !important</title>
+</head>
+<style>
+    .heading{
+        color:green;
+    }
+    #heading3{
+        color:lightcoral;
+    }
+    h1{
+        color: aqua;
+    }
+    h1{
+        color:red !important; 
+        color:blueviolet;
+    }
+</style>
+
+<body>
+    <h2>CSS Specificity</h2>
+    <p>CSS Preference: !important > inline CSS > id > class > latest tag >tag</p>
+
+    <h1>this is heading-1</h1>
+    <h1>this is heading-2</h1>
+    <h1 style="color: yellow;" class="heading" id="heading3">this is heading-3</h1>
+    <h1>this is heading-4</h1>
+</body>
+
+</html>
